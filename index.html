@@ -1,0 +1,506 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sanjana & Karthik</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Marcellus&family=Noto+Serif+Kannada:wght@600;700&display=swap">
+<style>
+  :root {
+    --ground: #faf6ee;
+    --ground-raised: rgba(253, 249, 242, 0.75); 
+    --mehendi: #4a5d31;
+    --mehendi-soft: #637b43;
+    --maroon: #800020;
+    --maroon-dark: #580016;
+    --font-display: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
+    --font-label: "Marcellus", "Cormorant Garamond", Georgia, serif;
+    --font-kannada: "Noto Serif Kannada", "Tunga", serif;
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--ground);
+    color: var(--maroon-dark);
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.65;
+    padding-block: 2rem 3rem;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* Fixed background pseudo-element: standard mobile-friendly fix for iOS & Android */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('weddingcardpic.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transform: translateZ(0); /* Enables hardware acceleration for smooth scrolling */
+  }
+
+  .page {
+    width: 100%;
+    max-width: 38rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .label {
+    font-family: var(--font-label);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--mehendi);
+  }
+
+  .invocation {
+    font-family: var(--font-kannada);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--maroon);
+    text-align: center;
+    margin: 0;
+    background: var(--ground-raised);
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  /* Arch */
+  .arch {
+    width: 100%;
+    background: var(--ground-raised);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-top-left-radius: 220px;
+    border-top-right-radius: 220px;
+    box-shadow: 0 0 0 4px rgba(250, 246, 238, 0.5), 0 0 0 6px var(--mehendi-soft);
+    padding: 4rem 1.25rem 2.5rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .lotus { width: 3.5rem; height: auto; display: block; }
+
+  .intro {
+    margin: 0;
+    max-width: 24rem;
+    color: var(--mehendi);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-wrap: balance;
+  }
+
+  .names {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    font-weight: 700;
+    font-size: clamp(2.4rem, 9.5vw, 4.2rem);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    color: var(--maroon);
+  }
+  .names .amp {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.65em;
+    color: var(--mehendi);
+    line-height: 1.2;
+  }
+
+  .parents {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1.5px solid rgba(74, 93, 49, 0.4);
+  }
+  .parents > div { min-width: 0; display: flex; flex-direction: column; gap: 0.35rem; }
+  .parents .label { font-size: 0.78rem; letter-spacing: 0.22em; color: var(--mehendi); font-weight: 600; }
+  .parents p { margin: 0; font-size: 1.1rem; font-weight: 600; line-height: 1.35; text-wrap: balance; color: var(--maroon-dark); }
+  .parents .who { color: var(--maroon); font-weight: 700; font-size: 1.2rem; }
+
+  .request {
+    margin: 0;
+    max-width: 26rem;
+    color: var(--mehendi);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-wrap: balance;
+  }
+
+  /* Divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    width: 100%;
+    max-width: 18rem;
+    color: var(--maroon);
+  }
+  .divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, var(--mehendi-soft));
+  }
+  .divider::after { transform: scaleX(-1); }
+  .divider i {
+    width: 8px; height: 8px; background: var(--maroon);
+    transform: rotate(45deg);
+    display: block;
+  }
+
+  /* Events */
+  .events {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--ground-raised);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 16px;
+    padding: 0.75rem 1.25rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+  .event {
+    display: grid;
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    gap: 1.25rem;
+    padding-block: 1.75rem;
+    border-top: 1.5px solid rgba(74, 93, 49, 0.35);
+    align-items: start;
+  }
+  .event:first-child { border-top: none; }
+  .event:last-child { border-bottom: none; }
+  .date-block { text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .date-block .num {
+    font-size: 4.2rem;
+    line-height: 0.9;
+    font-weight: 700;
+    color: var(--maroon);
+    font-variant-numeric: lining-nums;
+  }
+  .date-block .mon { margin-top: 0.5rem; font-size: 0.8rem; font-weight: 600; color: var(--mehendi); }
+  .event-body { min-width: 0; display: flex; flex-direction: column; gap: 0.35rem; }
+  .event-body h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 1.15;
+    color: var(--maroon);
+  }
+  .event-body .day { margin: 0; color: var(--mehendi); font-style: italic; font-weight: 600; font-size: 1.1rem; }
+  .time {
+    margin: 0.4rem 0 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--maroon-dark);
+    font-variant-numeric: lining-nums;
+  }
+  .time small {
+    display: block;
+    font-family: var(--font-label);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--mehendi);
+    margin-bottom: 0.15rem;
+  }
+  .cal {
+    margin-top: 0.75rem;
+    align-self: flex-start;
+    font-family: var(--font-label);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--maroon);
+    text-decoration: none;
+    border-bottom: 2px solid var(--mehendi-soft);
+    padding-bottom: 2px;
+  }
+  .cal:hover { color: var(--mehendi); border-color: var(--mehendi); }
+
+  /* Venue */
+  .venue {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+    text-align: center;
+    background: var(--ground-raised);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 16px;
+    padding: 1.75rem 1.25rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+  .venue h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: clamp(1.7rem, 6.5vw, 2.3rem);
+    line-height: 1.2;
+    color: var(--maroon);
+    text-wrap: balance;
+  }
+  .venue address {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--maroon-dark);
+    max-width: 28rem;
+    font-size: 1.15rem;
+    line-height: 1.55;
+    text-wrap: balance;
+  }
+  .btn {
+    display: inline-block;
+    font-family: var(--font-label);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background: var(--maroon);
+    padding: 0.9rem 1.6rem;
+    border: 1px solid var(--maroon);
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn:hover { background: transparent; color: var(--maroon); }
+  a:focus-visible { outline: 2px solid var(--maroon); outline-offset: 4px; }
+
+  /* Countdown */
+  .count {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+    text-align: center;
+    background: var(--ground-raised);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 16px;
+    padding: 1.75rem 1.25rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+  .clock {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.4rem;
+    width: 100%;
+    max-width: 26rem;
+  }
+  .clock div { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }
+  .clock b {
+    font-weight: 700;
+    font-size: clamp(2.2rem, 9.5vw, 3.2rem);
+    line-height: 1;
+    color: var(--maroon);
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+  .clock span { font-family: var(--font-label); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mehendi); }
+  .done { margin: 0; font-style: italic; font-weight: 600; color: var(--maroon-dark); font-size: 1.3rem; }
+
+  footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--ground-raised);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 16px;
+    padding: 1.4rem;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+  footer p { margin: 0; font-style: italic; font-weight: 600; font-size: 1.15rem; color: var(--mehendi); text-wrap: balance; max-width: 24rem; }
+  footer .sign { font-style: normal; font-weight: 700; font-size: 1.7rem; color: var(--maroon); letter-spacing: 0.02em; }
+
+  /* Mobile responsiveness adjustments */
+  @media (max-width: 480px) {
+    body::before {
+      background-position: center top;
+      background-size: cover;
+    }
+    .arch {
+      border-top-left-radius: 140px;
+      border-top-right-radius: 140px;
+      padding-top: 3.2rem;
+      padding-inline: 1rem;
+    }
+    .event {
+      grid-template-columns: 4.8rem minmax(0, 1fr);
+      gap: 0.9rem;
+    }
+    .date-block .num { font-size: 3.5rem; }
+    .parents {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      text-align: center;
+    }
+    .parents > div { align-items: center; }
+  }
+</style>
+
+<main class="page">
+  <p class="invocation">॥ ಶ್ರೀ ಗಣೇಶಾಯ ನಮಃ ॥</p>
+
+  <section class="arch" aria-label="Invitation">
+    <svg class="lotus" viewBox="0 0 64 40" fill="none" stroke="#800020" stroke-width="1.6" aria-hidden="true">
+      <path d="M32 4 C26 14 26 24 32 34 C38 24 38 14 32 4Z"/>
+      <path d="M32 34 C20 32 12 24 10 12 C20 14 28 22 32 34Z"/>
+      <path d="M32 34 C44 32 52 24 54 12 C44 14 36 22 32 34Z"/>
+      <path d="M32 34 C18 36 8 32 2 24 C12 22 24 26 32 34Z"/>
+      <path d="M32 34 C46 36 56 32 62 24 C52 22 40 26 32 34Z"/>
+    </svg>
+
+    <p class="intro">Together with their families</p>
+
+    <h1 class="names">
+      <span>Sanjana S</span>
+      <span class="amp">and</span>
+      <span>Karthik Raj M N</span>
+    </h1>
+
+    <p class="request">joyfully invite you to celebrate their marriage, and to bless the couple with your presence.</p>
+
+    <div class="parents">
+      <div>
+        <span class="label">Bride</span>
+        <p class="who">Sanjana S</p>
+        <p>Daughter of<br>Kalavathi &amp; N Subramanya</p>
+      </div>
+      <div>
+        <span class="label">Groom</span>
+        <p class="who">Karthik Raj M N</p>
+        <p>Son of<br>Vatsala G &amp; M S Nagaraja</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><i></i></div>
+
+  <section class="events" aria-label="Events">
+    <article class="event">
+      <div class="date-block">
+        <span class="num">25</span>
+        <span class="label mon">Nov 2026</span>
+      </div>
+      <div class="event-body">
+        <h2>Reception</h2>
+        <p class="day">Wednesday, 25 November 2026</p>
+        <p class="time"><small>Evening</small>7:00 pm onwards</p>
+        <a class="cal" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Reception%3A%20Sanjana%20S%20%26%20Karthik%20Raj%20M%20N&amp;dates=20261125T133000Z/20261125T163000Z&amp;location=Sri%20Lakshmi%20Srinivasa%20Kalyana%20Mantapa%2C%20H.B.R.%20Layout%2C%20Bengaluru%20560043">Add to calendar</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="date-block">
+        <span class="num">26</span>
+        <span class="label mon">Nov 2026</span>
+      </div>
+      <div class="event-body">
+        <h2>Wedding</h2>
+        <p class="day">Thursday, 26 November 2026</p>
+        <p class="time"><small>Muhurtham</small>10:50 am &ndash; 11:50 am</p>
+        <a class="cal" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Wedding%3A%20Sanjana%20S%20%26%20Karthik%20Raj%20M%20N&amp;dates=20261126T052000Z/20261126T062000Z&amp;location=Sri%20Lakshmi%20Srinivasa%20Kalyana%20Mantapa%2C%20H.B.R.%20Layout%2C%20Bengaluru%20560043">Add to calendar</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="venue" aria-label="Venue">
+    <span class="label">Venue</span>
+    <h2>Sri Lakshmi Srinivasa Kalyana Mantapa</h2>
+    <address>
+      # 80/10 &amp; 11, 21st Cross, 18th Main, 1st Stage, V Block,<br>
+      Behind Nagawara BESCOM Office, Next to Best School,<br>
+      H.B.R. Layout, Bengaluru &ndash; 560043
+    </address>
+    <a class="btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/kpGjkwDq53D6S76K9">Open in Google Maps</a>
+  </section>
+
+  <div class="divider" aria-hidden="true"><i></i></div>
+
+  <section class="count" aria-label="Countdown to the wedding">
+    <span class="label" id="count-label">Until the muhurtham</span>
+    <div class="clock" id="clock">
+      <div><b id="cd-d">24</b><span>Days</span></div>
+      <div><b id="cd-h">00</b><span>Hours</span></div>
+      <div><b id="cd-m">00</b><span>Minutes</span></div>
+      <div><b id="cd-s">00</b><span>Seconds</span></div>
+    </div>
+    <p class="done" id="done" hidden>With your blessings, the celebrations have begun.</p>
+  </section>
+
+  <footer>
+    <p>We look forward to sharing this joyful occasion with you and your family.</p>
+    <span class="sign">Sanjana &amp; Karthik</span>
+  </footer>
+</main>
+
+<script>
+  (function () {
+    var target = new Date("2026-11-26T10:50:00+05:30").getTime();
+    var end = new Date("2026-11-26T11:50:00+05:30").getTime();
+    var d = document.getElementById("cd-d"), h = document.getElementById("cd-h"),
+        m = document.getElementById("cd-m"), s = document.getElementById("cd-s"),
+        clock = document.getElementById("clock"), done = document.getElementById("done"),
+        label = document.getElementById("count-label");
+    function pad(n) { return n < 10 ? "0" + n : String(n); }
+    function tick() {
+      var diff = target - Date.now();
+      if (diff <= 0) {
+        clock.hidden = true;
+        done.hidden = false;
+        label.textContent = Date.now() < end ? "The muhurtham is now" : "With gratitude";
+        if (Date.now() >= end) done.textContent = "Thank you for blessing the couple.";
+        return false;
+      }
+      var secs = Math.floor(diff / 1000);
+      d.textContent = Math.floor(secs / 86400);
+      h.textContent = pad(Math.floor((secs % 86400) / 3600));
+      m.textContent = pad(Math.floor((secs % 3600) / 60));
+      s.textContent = pad(secs % 60);
+      return true;
+    }
+    if (tick()) {
+      var timer = setInterval(function () { if (!tick()) clearInterval(timer); }, 1000);
+    }
+  })();
+</script>
+
+</body></html>
