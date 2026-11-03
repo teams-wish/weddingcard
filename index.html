@@ -92,7 +92,7 @@
     border-top-left-radius: 220px;
     border-top-right-radius: 220px;
     box-shadow: 0 0 0 4px rgba(250, 246, 238, 0.5), 0 0 0 6px var(--mehendi-soft);
-    padding: 4rem 1.25rem 2.5rem;
+    padding: 3.5rem 1.25rem 2.5rem;
     margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -101,7 +101,7 @@
     text-align: center;
   }
 
-  .lotus { width: 3.5rem; height: auto; display: block; }
+  .ganesha-icon { width: 5.5rem; height: auto; display: block; }
 
   .intro {
     margin: 0;
@@ -109,7 +109,7 @@
     color: var(--mehendi);
     font-style: italic;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     text-wrap: balance;
   }
 
@@ -144,7 +144,7 @@
   .parents > div { min-width: 0; display: flex; flex-direction: column; gap: 0.35rem; }
   .parents .label { font-size: 0.78rem; letter-spacing: 0.22em; color: var(--mehendi); font-weight: 600; }
   .parents p { margin: 0; font-size: 1.1rem; font-weight: 600; line-height: 1.35; text-wrap: balance; color: var(--maroon-dark); }
-  .parents .who { color: var(--maroon); font-weight: 700; font-size: 1.2rem; }
+  .parents .who { color: var(--maroon); font-weight: 800; font-size: 1.5rem; }
 
   .request {
     margin: 0;
@@ -152,7 +152,7 @@
     color: var(--mehendi);
     font-style: italic;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-wrap: balance;
   }
 
@@ -217,7 +217,7 @@
     line-height: 1.15;
     color: var(--maroon);
   }
-  .event-body .day { margin: 0; color: var(--mehendi); font-style: italic; font-weight: 600; font-size: 1.1rem; }
+  .event-body .day { margin: 0; color: var(--mehendi); font-style: italic; font-weight: 600; font-size: 1.4rem; }
   .time {
     margin: 0.4rem 0 0;
     font-size: 1.5rem;
@@ -347,7 +347,7 @@
     width: 100%;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   }
-  footer p { margin: 0; font-style: italic; font-weight: 600; font-size: 1.15rem; color: var(--mehendi); text-wrap: balance; max-width: 24rem; }
+  footer p { margin: 0; font-style: italic; font-weight: 600; font-size: 1.45rem; color: var(--mehendi); text-wrap: balance; max-width: 24rem; }
   footer .sign { font-style: normal; font-weight: 700; font-size: 1.7rem; color: var(--maroon); letter-spacing: 0.02em; }
 
   /* Mobile responsiveness adjustments */
@@ -380,12 +380,35 @@
   <p class="invocation">॥ ಶ್ರೀ ಗಣೇಶಾಯ ನಮಃ ॥</p>
 
   <section class="arch" aria-label="Invitation">
-    <svg class="lotus" viewBox="0 0 64 40" fill="none" stroke="#800020" stroke-width="1.6" aria-hidden="true">
-      <path d="M32 4 C26 14 26 24 32 34 C38 24 38 14 32 4Z"/>
-      <path d="M32 34 C20 32 12 24 10 12 C20 14 28 22 32 34Z"/>
-      <path d="M32 34 C44 32 52 24 54 12 C44 14 36 22 32 34Z"/>
-      <path d="M32 34 C18 36 8 32 2 24 C12 22 24 26 32 34Z"/>
-      <path d="M32 34 C46 36 56 32 62 24 C52 22 40 26 32 34Z"/>
+    
+    <!-- Custom Abstract Ganesha replicating the provided image -->
+    <svg class="ganesha-icon" viewBox="0 0 100 115" fill="none" stroke="#C29B42" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <!-- Top Bindu (Oval) -->
+      <ellipse cx="50" cy="12" rx="3.5" ry="6" fill="#C29B42" stroke="none" />
+      
+      <!-- Tiered Crown Lines -->
+      <path d="M 42 24 Q 50 26 58 24" />
+      <path d="M 39 29 Q 50 31 61 29" />
+      <path d="M 37 34 Q 50 36 63 34" />
+      
+      <!-- Crown Side Arcs -->
+      <path d="M 32 28 C 30 18 35 12 39 10" />
+      <path d="M 68 28 C 70 18 65 12 61 10" />
+      
+      <!-- Red Tilak -->
+      <path d="M 50 40 C 53.5 46 53.5 53 50 55 C 46.5 53 46.5 46 50 40 Z" fill="#D91A2A" stroke="none" />
+      
+      <!-- Left Ear (Outer & Inner) -->
+      <path d="M 38 40 C 12 32 6 52 18 58 C 24 61 32 52 42 58" />
+      <path d="M 34 45 C 24 47 25 54 29 55" />
+      
+      <!-- Right Ear (Outer & Inner) -->
+      <path d="M 62 40 C 88 32 94 52 82 58 C 76 61 68 52 58 58" />
+      <path d="M 66 45 C 76 47 75 54 71 55" />
+      
+      <!-- Flowing Trunk Lines -->
+      <path d="M 42 58 C 48 62 55 72 55 82 C 55 90 48 97 42 101" />
+      <path d="M 58 58 C 52 64 64 78 61 88 C 59 95 50 104 42 109" />
     </svg>
 
     <p class="intro">Together with their families</p>
